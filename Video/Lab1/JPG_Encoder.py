@@ -7,10 +7,10 @@ OK too
 '''
 
 import numpy as np
-from exercise1 import Translator
+from Video.Lab1.RGB_Translator import Translator
 from PIL import Image
 from scipy.fftpack import dct
-from utils import *
+from Video.Lab2.utils import *
 
 class JPEGEncoder:
 

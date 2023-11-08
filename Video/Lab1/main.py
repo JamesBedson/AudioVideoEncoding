@@ -1,9 +1,9 @@
-from exercise1 import ex1
-from exercise2 import ex2
-from exercise3 import ex3
-from exercise4 import ex4
-from exercise5 import ex5
-from exercise6 import ex6
+from Video.Lab1.RGB_Translator import ex1
+from Video.Lab1.Image_Q_Reducer import ex2
+from Video.Lab1.Zigzag_Algorithm import ex3
+from Video.Lab1.BW_Compressor import ex4
+from Video.Lab1.RL_Encoder import ex5
+from Video.Lab1.JPG_Encoder import ex6
 
 def main():
     #ex1()
