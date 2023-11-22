@@ -1,5 +1,5 @@
 import subprocess
-import utils
+import Video.utils as utils
 
 def modify_chroma_subsampling(video_file_path: str, subsampling_scheme: str) -> None:
 

@@ -5,7 +5,7 @@ automate this process.
 '''
 
 import subprocess
-from Video.Lab2.utils import *
+from Video.utils import *
 
 def reduce_image_quality(input_file_path: str, 
                          output_file_path: str, 

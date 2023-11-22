@@ -1,5 +1,5 @@
 import subprocess
-import utils as utl
+import Video.utils as utl
 
 def modify_resolution(video_file_path: str, resolution_wh: tuple[int, int]) -> None:
     

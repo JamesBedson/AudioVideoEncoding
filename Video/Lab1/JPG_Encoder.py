@@ -10,7 +10,7 @@ import numpy as np
 from Video.Lab1.RGB_Translator import Translator
 from PIL import Image
 from scipy.fftpack import dct
-from Video.Lab2.utils import *
+from Video.utils import *
 
 class JPEGEncoder:
 

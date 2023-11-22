@@ -1,5 +1,5 @@
 # Ex 4 =======================================================================
-from Video.Lab2.utils import *
+from Video.utils import *
 
 '''
 Use FFMPEG to transform the previous image

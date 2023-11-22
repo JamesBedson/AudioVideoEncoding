@@ -1,5 +1,5 @@
 import subprocess
-import utils
+import Video.utils as utils
 from MP2_Converter import get_info_from_video, parse_video_information
 
 def print_video_info(video_file_path: str):

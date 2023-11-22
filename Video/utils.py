@@ -1,5 +1,6 @@
 from PIL import Image
 import numpy as np
+import subprocess
 
 def load_image(file_path: str) -> np.ndarray:
     image = Image.open(file_path)
@@ -31,3 +32,8 @@ def parse_file_name(file_path: str) -> str:
 
 def parse_sub_directories(file_path: str) -> str:
     return file_path.replace(parse_file_name(file_path), "") 
+
+def cut_video_duration(in_fp: str, out_fp: str, start_time: str, end_time: str) -> None:
+    
+    cmd         = ["ffmpeg", "-i", in_fp, "-ss", start_time, "-to", end_time, out_fp]
+    subprocess.run(cmd)
