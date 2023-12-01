@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/james/Documents/Development/University/AudioVideoEncoding/build",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/james/Documents/Development/University/AudioVideoEncoding/build -I/Users/james/Documents/Development/University/AudioVideoEncoding/src -I/Users/james/Documents/Development/University/AudioVideoEncoding/build/FFMPEG_Converter_autogen/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtCore.framework/Headers -iframework /Users/james/Qt/6.6.1/macos/lib -isystem /Users/james/Qt/6.6.1/macos/mkspecs/macx-clang -isystem /Users/james/Qt/6.6.1/macos/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtWidgets.framework/Headers -isystem /Users/james/Qt/6.6.1/macos/lib/QtGui.framework/Headers -g -Wall -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -o CMakeFiles/FFMPEG_Converter.dir/FFMPEG_Converter_autogen/mocs_compilation.cpp.o -c /Users/james/Documents/Development/University/AudioVideoEncoding/build/FFMPEG_Converter_autogen/mocs_compilation.cpp",
+  "file": "/Users/james/Documents/Development/University/AudioVideoEncoding/build/FFMPEG_Converter_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/FFMPEG_Converter.dir/FFMPEG_Converter_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/james/Documents/Development/University/AudioVideoEncoding/build",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/james/Documents/Development/University/AudioVideoEncoding/build -I/Users/james/Documents/Development/University/AudioVideoEncoding/src -I/Users/james/Documents/Development/University/AudioVideoEncoding/build/FFMPEG_Converter_autogen/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtCore.framework/Headers -iframework /Users/james/Qt/6.6.1/macos/lib -isystem /Users/james/Qt/6.6.1/macos/mkspecs/macx-clang -isystem /Users/james/Qt/6.6.1/macos/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtWidgets.framework/Headers -isystem /Users/james/Qt/6.6.1/macos/lib/QtGui.framework/Headers -g -Wall -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -o CMakeFiles/FFMPEG_Converter.dir/main.cpp.o -c /Users/james/Documents/Development/University/AudioVideoEncoding/src/main.cpp",
+  "file": "/Users/james/Documents/Development/University/AudioVideoEncoding/src/main.cpp",
+  "output": "CMakeFiles/FFMPEG_Converter.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/james/Documents/Development/University/AudioVideoEncoding/build",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/james/Documents/Development/University/AudioVideoEncoding/build -I/Users/james/Documents/Development/University/AudioVideoEncoding/src -I/Users/james/Documents/Development/University/AudioVideoEncoding/build/FFMPEG_Converter_autogen/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtCore.framework/Headers -iframework /Users/james/Qt/6.6.1/macos/lib -isystem /Users/james/Qt/6.6.1/macos/mkspecs/macx-clang -isystem /Users/james/Qt/6.6.1/macos/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtWidgets.framework/Headers -isystem /Users/james/Qt/6.6.1/macos/lib/QtGui.framework/Headers -g -Wall -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -o CMakeFiles/FFMPEG_Converter.dir/CustomComponent.cpp.o -c /Users/james/Documents/Development/University/AudioVideoEncoding/src/CustomComponent.cpp",
+  "file": "/Users/james/Documents/Development/University/AudioVideoEncoding/src/CustomComponent.cpp",
+  "output": "CMakeFiles/FFMPEG_Converter.dir/CustomComponent.cpp.o"
+},
+{
+  "directory": "/Users/james/Documents/Development/University/AudioVideoEncoding/build",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/james/Documents/Development/University/AudioVideoEncoding/build -I/Users/james/Documents/Development/University/AudioVideoEncoding/src -I/Users/james/Documents/Development/University/AudioVideoEncoding/build/FFMPEG_Converter_autogen/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtCore.framework/Headers -iframework /Users/james/Qt/6.6.1/macos/lib -isystem /Users/james/Qt/6.6.1/macos/mkspecs/macx-clang -isystem /Users/james/Qt/6.6.1/macos/include -isystem /Users/james/Qt/6.6.1/macos/lib/QtWidgets.framework/Headers -isystem /Users/james/Qt/6.6.1/macos/lib/QtGui.framework/Headers -g -Wall -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -o CMakeFiles/FFMPEG_Converter.dir/MainWindow.cpp.o -c /Users/james/Documents/Development/University/AudioVideoEncoding/src/MainWindow.cpp",
+  "file": "/Users/james/Documents/Development/University/AudioVideoEncoding/src/MainWindow.cpp",
+  "output": "CMakeFiles/FFMPEG_Converter.dir/MainWindow.cpp.o"
+}
+]

@@ -1,0 +1,4 @@
+/Users/james/Documents/Development/University/AudioVideoEncoding/build/CMakeFiles/FFMPEG_Converter.dir
+/Users/james/Documents/Development/University/AudioVideoEncoding/build/CMakeFiles/edit_cache.dir
+/Users/james/Documents/Development/University/AudioVideoEncoding/build/CMakeFiles/rebuild_cache.dir
+/Users/james/Documents/Development/University/AudioVideoEncoding/build/CMakeFiles/FFMPEG_Converter_autogen.dir
