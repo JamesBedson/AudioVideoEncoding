@@ -1,3 +1,7 @@
+# Paths workaround
+
+from Paths import *
+
 import os
 
 # Qt
@@ -263,7 +267,7 @@ class PlaceholderComponent(QWidget):
         super().__init__(parent)
 
         self.gif_label = QLabel(self)
-        self.gif_movie = QtGui.QMovie("/Users/james/Documents/Development/University/AudioVideoEncoding/FFMPEG_Converter_Python/assets/grinch.gif")
+        self.gif_movie = QtGui.QMovie(GRINCH)
 
         self.gif_label.setMovie(self.gif_movie)
         self.gif_label.setAlignment(Qt.AlignmentFlag.AlignCenter)

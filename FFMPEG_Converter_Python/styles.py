@@ -1,5 +1,6 @@
 from enum import Enum
 from PyQt6.QtGui import QFont
+from Paths import * 
 
 class Color(Enum):
     BACKGROUND_COLOR_PRIMARY    = "#18191c"
@@ -66,7 +67,7 @@ QComboBox QAbstractItemView {{
 
 
 QComboBox::down-arrow {{
-    image: url("/Users/james/Documents/Development/University/AudioVideoEncoding/FFMPEG_Converter_Python/assets/down-arrow_white.png");
+    image: url({DOWN_ARROW});
     width: 10px;
     height: 10px;
 }}

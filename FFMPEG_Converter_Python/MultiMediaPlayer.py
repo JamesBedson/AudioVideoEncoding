@@ -4,6 +4,8 @@ from PyQt6.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout
 from SettingsManager import SettingsManager, SignalManager
 from PyQt6.QtMultimediaWidgets import QVideoWidget
 
+from Paths import * 
+
 class MultiMediaPlayer(QWidget):
     def __init__(self, parent: QWidget, fileManager: SettingsManager, signalManager: SignalManager):
         super().__init__(parent)
@@ -22,27 +24,27 @@ class MultiMediaPlayer(QWidget):
         self.signalManager.fileDropped.connect(self.initialiseMediaPath)
 
         self.slowDownButton = QtWidgets.QPushButton(self)
-        self.slowDownButton.setIcon(QtGui.QIcon("/Users/james/Documents/Development/University/AudioVideoEncoding/FFMPEG_Converter_Python/assets/rewind.png"))
+        self.slowDownButton.setIcon(QtGui.QIcon(REWIND))
         self.slowDownButton.setCursor(Qt.CursorShape.PointingHandCursor)
         self.slowDownButton.clicked.connect(self.slowSpeed)
 
         self.playButton = QtWidgets.QPushButton(self)
-        self.playButton.setIcon(QtGui.QIcon("/Users/james/Documents/Development/University/AudioVideoEncoding/FFMPEG_Converter_Python/assets/play.png"))
+        self.playButton.setIcon(QtGui.QIcon(PLAY))
         self.playButton.setCursor(Qt.CursorShape.PointingHandCursor)
         self.playButton.clicked.connect(self.playMedia)
 
         self.pauseButton = QtWidgets.QPushButton(self)
-        self.pauseButton.setIcon(QtGui.QIcon("/Users/james/Documents/Development/University/AudioVideoEncoding/FFMPEG_Converter_Python/assets/pause.png"))
+        self.pauseButton.setIcon(QtGui.QIcon(PAUSE))
         self.pauseButton.setCursor(Qt.CursorShape.PointingHandCursor)
         self.pauseButton.clicked.connect(self.pauseMedia)
 
         self.stopButton = QtWidgets.QPushButton(self)
-        self.stopButton.setIcon(QtGui.QIcon("/Users/james/Documents/Development/University/AudioVideoEncoding/FFMPEG_Converter_Python/assets/stop.png"))
+        self.stopButton.setIcon(QtGui.QIcon(STOP))
         self.stopButton.setCursor(Qt.CursorShape.PointingHandCursor)
         self.stopButton.clicked.connect(self.stopMedia)
 
         self.fastforwardButton = QtWidgets.QPushButton(self)
-        self.fastforwardButton.setIcon(QtGui.QIcon("/Users/james/Documents/Development/University/AudioVideoEncoding/FFMPEG_Converter_Python/assets/fastForward.png"))
+        self.fastforwardButton.setIcon(QtGui.QIcon(FF))
         self.fastforwardButton.setCursor(Qt.CursorShape.PointingHandCursor)
         self.fastforwardButton.clicked.connect(self.fastForward)
 

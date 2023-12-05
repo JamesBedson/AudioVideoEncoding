@@ -120,7 +120,7 @@ class SettingsManager:
     
     def sendConversionEvent(self, event: ConversionEvent) -> None:
         if event == ConversionEvent.AUDIO_CONVERSION:
-            self.context.convert(event, self.currentInputFilePath, self.currentOutputFilePath, self.fileInfo, self.currentAudioSettings)
+            self.context.convert(event, self.currentInputFilePath, self.currentOutputFilePath, self.currentAudioSettings)
         else:
-            self.context.convert(event, self.currentInputFilePath, self.currentOutputFilePath, self.fileInfo, self.currentVideoSettings)
+            self.context.convert(event, self.currentInputFilePath, self.currentOutputFilePath, self.currentVideoSettings)
     

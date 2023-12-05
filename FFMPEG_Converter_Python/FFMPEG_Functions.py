@@ -12,9 +12,7 @@ class AudioOutputFormat(Enum):
     FLAC    = "flac (Free Lossless Audio Codec)"
     OGG     = "ogg (Vorbis)"
     M4A     = "m4a (Advanced Audio Codec)"
-    AC3     = "ac3 (Dolby Digital)"
     AIFF    = "aiff (Pulse Code Modulation)"
-    AMR     = "amr (Adaptive Multi-Rate)"
     MP2     = "mp2 (MPEG Audio Layer II)"
 
 class SampleRate(Enum):
@@ -26,18 +24,19 @@ class SampleRate(Enum):
     RATE_192_KHZ    = "192 kHz"
 
 class VideoOutputFormat(Enum):
-    MP4     = "mp4 (H.264)"
-    AVI     = "avi (Xvid)"
-    MKV     = "mkv (H.264)"
-    MOV     = "mov (H.264)"
-    WMV     = "wmv (Windows Media Video)"
-    FLV     = "flv (H.264)"
-    WEBM    = "webm (VP8)"
-    MPEG    = "mpeg (MPEG-2)"
-    OGV     = "ogv (Theora)"
-    _3GP    = "3gp (H.264)"
+    MP4         = "mp4 (Av1)"
+    MKV         = "mkv (H.265)"
+    MOV         = "mov (H.264)"
+    WMV         = "wmv (Windows Media Video)"
+    FLV         = "flv (H.264)"
+    WEBM_VP8    = "webm (VP8)"
+    WEBM_VP9    = "webm (VP9)"
+    MPEG        = "mpeg (MPEG-2)"
+    OGV         = "ogv (Theora)"
 
 class VideoResolution(Enum):
+    SD_160x120          = "160x120"
+    SD_360x240          = "360x240"
     SD_640x480          = "640x480 (SD)"
     SD_720x480          = "720x480 (SD)"
     HD_1280x720         = "1280x720 (HD)"
@@ -72,16 +71,15 @@ sampleRateToFormat: dict[str, str] = {
 }
 
 videoCodecs: dict[str, str] = {
-                VideoOutputFormat.MP4.value: "libx264",
-                VideoOutputFormat.AVI.value: "libxvid",
-                VideoOutputFormat.MKV.value: "libx264",
-                VideoOutputFormat.MOV.value: "libx264",
-                VideoOutputFormat.WMV.value: "wmv2",
-                VideoOutputFormat.FLV.value: "libx264",
-                VideoOutputFormat.WEBM.value: "libvpx",
-                VideoOutputFormat.MPEG.value: "mpeg2video",
-                VideoOutputFormat.OGV.value: "libtheora",
-                VideoOutputFormat._3GP.value: "libx264"
+                VideoOutputFormat.MP4.value:        "libaom-av1",
+                VideoOutputFormat.MKV.value:        "libx265",
+                VideoOutputFormat.MOV.value:        "libx264",
+                VideoOutputFormat.WMV.value:        "wmv2",
+                VideoOutputFormat.FLV.value:        "libx264",
+                VideoOutputFormat.WEBM_VP8.value:   "libvpx",
+                VideoOutputFormat.WEBM_VP9.value:   "libvpx-vp9",
+                VideoOutputFormat.MPEG.value:       "mpeg2video",
+                VideoOutputFormat.OGV.value:        "libtheora",
             }
 
 audioCodecs: dict[str, str] = {
@@ -91,19 +89,19 @@ audioCodecs: dict[str, str] = {
                 AudioOutputFormat.FLAC.value: "flac",
                 AudioOutputFormat.OGG.value: "libvorbis",
                 AudioOutputFormat.M4A.value: "aac",
-                AudioOutputFormat.AC3.value: "ac3",
                 AudioOutputFormat.AIFF.value: "pcm_s16be",
-                AudioOutputFormat.AMR.value: "amr_nb",
                 AudioOutputFormat.MP2.value: "mp2",
                 }
 
 videoQualitySettings: dict[str, tuple[str, list[str]]] = {
-    "libx264":      ("-crf", ["18", "23", "28"]), 
-    "libxvid":      ("-q:v", ["1", "20", "31"]),
-    "wmv2":         ("-q:v", ["1", "20", "31"]),
-    "libvpx":       ("-crf", ["20", "30", "40"]),  
-    "mpeg2video":   ("-b:v", ["8000k", "5000k", "500k"]),
-    "libtheora":    ("-q:v", ["-1", "5", "10"]),
+    "libaom-av1":    ("-crf", ["20", "30", "40"]),
+    "libx265":       ("-crf", ["18", "23", "28"]),
+    "libx264":       ("-crf", ["18", "23", "28"]),
+    "wmv2":          ("-q:v", ["1", "20", "31"]),
+    "libvpx":        ("-crf", ["20", "30", "40"]),  
+    "libvpx-vp9":    ("-crf", ["20", "30", "40"]),
+    "mpeg2video":    ("-b:v", ["8000k", "5000k", "500k"]),
+    "libtheora":     ("-q:v", ["-1", "5", "10"]),
 }
 
 audioQualitySettings: dict[str, tuple[str, list[str]]] = {
@@ -159,7 +157,6 @@ class FFMPEG_Context:
                 event: ConversionEvent, 
                 inputFilePath: str, 
                 outputFilePath: str, 
-                fileSettings: dict, 
                 conversionSettings: dict) -> None:
 
         if event == ConversionEvent.VIDEO_CONVERSION:
@@ -184,7 +181,7 @@ class FFMPEG_Context:
                 outputFilePath
             ]
 
-            subprocess.run(cmd, input = "y".encode())
+            subprocess.run(cmd, input="y".encode())
 
         elif event == ConversionEvent.AUDIO_CONVERSION:
             outputFormat    = str(conversionSettings[AudioOutputFormat])
@@ -214,8 +211,9 @@ class FFMPEG_Context:
             cmd.append(outputFilePath)
 
 
-            subprocess.run(cmd, input = "y".encode())
-            
+            result = subprocess.run(cmd, input="y".encode(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            print(result.stdout)
+            print(result.stderr)
 
         else:
             print("Invalid conversion event")
