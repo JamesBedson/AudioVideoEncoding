@@ -1,0 +1,11 @@
+
+1. Tell me everything about the DCT (2.5p)
+2. Small Concepts (what is a pixel? What is the aspect ratio? What is a video? What is bitrate?) (0.5p)
+3. Chroma Subsampling (1.5p)
+4. Everything motion estimation (I-P-B frames) (2p)
+5. Video Containers (0.5p)
+6. Cocecs War (1.5p)
+7. ??? (1.5p) 
+
+Maybe:
+MPEG2? h264? Codecs? AV1?
